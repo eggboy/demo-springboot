@@ -103,6 +103,8 @@ Returns available actuator endpoints.
 curl http://localhost:8080/actuator
 ```
 
+**Security Note:** By default, this application only exposes the `health` and `info` endpoints for security reasons. Other actuator endpoints that may contain sensitive information (like `env`, `configprops`, etc.) are not exposed. You can customize this in `application.properties` if needed, but be careful about exposing sensitive endpoints in production.
+
 ## Configuration
 
 Application configuration can be customized in `src/main/resources/application.properties`.
